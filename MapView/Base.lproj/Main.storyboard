@@ -16,19 +16,56 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-7s-5c7">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GQq-7s-5c7">
                                 <rect key="frame" x="16" y="44" width="358" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="엔지스테크널러지"/>
+                                    <segment title="에이스당구클럽"/>
+                                    <segment title="우리집"/>
                                 </segments>
+                                <connections>
+                                    <action selector="segChnageLocation:" destination="BYZ-38-t0r" eventType="valueChanged" id="AfC-lJ-E2V"/>
+                                </connections>
                             </segmentedControl>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="QPY-RR-5I1">
+                                <rect key="frame" x="16" y="83" width="358" height="667.33333333333337"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVk-Va-Vvo">
+                                <rect key="frame" x="16" y="761.33333333333337" width="358" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re0-LR-iab">
+                                <rect key="frame" x="16" y="789.66666666666663" width="358" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Re0-LR-iab" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="1j0-Ai-hWB"/>
+                            <constraint firstItem="PVk-Va-Vvo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3bs-vK-ZH1"/>
+                            <constraint firstItem="GQq-7s-5c7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8Jk-sp-bwc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QPY-RR-5I1" secondAttribute="trailing" constant="16" id="Dtj-l3-kwg"/>
+                            <constraint firstItem="GQq-7s-5c7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O0m-v2-rND"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GQq-7s-5c7" secondAttribute="trailing" constant="16" id="Sbz-sN-18m"/>
+                            <constraint firstItem="Re0-LR-iab" firstAttribute="top" secondItem="PVk-Va-Vvo" secondAttribute="bottom" constant="8" id="epj-Yv-Xkm"/>
+                            <constraint firstItem="QPY-RR-5I1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="fxk-ea-fTK"/>
+                            <constraint firstItem="PVk-Va-Vvo" firstAttribute="top" secondItem="QPY-RR-5I1" secondAttribute="bottom" constant="11" id="gzB-1X-nJj"/>
+                            <constraint firstItem="Re0-LR-iab" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j16-mw-uEk"/>
+                            <constraint firstItem="QPY-RR-5I1" firstAttribute="top" secondItem="GQq-7s-5c7" secondAttribute="bottom" constant="8" id="p8f-xS-YMU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Re0-LR-iab" secondAttribute="trailing" constant="16" id="sja-y7-b46"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PVk-Va-Vvo" secondAttribute="trailing" constant="16" id="yve-Fe-N6w"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lbLocation1" destination="PVk-Va-Vvo" id="gxx-mh-TGu"/>
+                        <outlet property="lbLocation2" destination="Re0-LR-iab" id="Vdw-dw-DAl"/>
+                        <outlet property="myMap" destination="QPY-RR-5I1" id="n0c-bC-WKC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
